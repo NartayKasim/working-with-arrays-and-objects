@@ -95,27 +95,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-// const removeDuplicates = () => {
-
-//   for (let i = 0; i < workplaceAccidents.length; i++) {
-//     for (let j = workplaceAccidents.length; j > i; j--) {
-//       if (workplaceAccidents[i] === workplaceAccidents[j]) {
-//         workplaceAccidents.splice(j, 1)
-//       }
-//     }
-//   }
-
-//   return workplaceAccidents
-// }
-
 const removeDuplicates = () => {
-  for (let i = 0; i < workplaceAccidents.length ; i++){
-    for (let j = i+1; j < workplaceAccidents.length; j++){
-      if (workplaceAccidents[j] === workplaceAccidents[i]) {
+
+  for (let i = 0; i < workplaceAccidents.length; i++) {
+    for (let j = workplaceAccidents.length; j > i; j--) {
+      if (workplaceAccidents[i] === workplaceAccidents[j]) {
         workplaceAccidents.splice(j, 1)
       }
     }
-  }  
+  }
+
   return workplaceAccidents
 }
 
